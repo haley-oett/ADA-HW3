@@ -1,0 +1,2 @@
+ # ReadMe
+ This file discusses the class survey that is being submitted for homework 3. The survey was distrubted online to students in the Washington University in St Louis Advanced Data Anaylsis Fall 2024 course. The data collected is from a wide vareity of questions from favirotie pet, to month born. 

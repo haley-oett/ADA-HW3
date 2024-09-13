@@ -1,0 +1,66 @@
+---
+title: "HW1"
+author: "Haley Oetterer"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+ Import class one survey data from our Github site (https://github.com/kijohnson/ADA-2024) (The dataset is called ‘Class 1 Survey Fall 2024_di.csv’), calling the R dataframe that you create C1survey.
+ 
+```{r}
+Class_fall<-
+ read_csv(
+ "https://raw.githubusercontent.com/kijohnson/ADA-2024/main/Class%201%20(Getting%20started%20and%20RR%20I)/Lab/Class%201%20Survey%20Fall%202024_di.csv"
+ )
+```
+
+# 2. Determine: 
+# a. the number of observations (i.e. the number of people who filled out the survey) 
+# b. the number of variables in the dataframe.
+
+```{r}
+ nrow(Class_fall) 
+ncol(Class_fall)
+
+
+```
+
+# 3. 
+#a. Rename the column variables to something shorter and that is descriptive of what the variable is about (for example like_dogs for the ‘Do you like dogs?’ question variable) 
+#b. Display that they are renamed
+
+```{r}
+#use names function to rename the 27 variables in order
+names(Class_fall)[1:27]<-c("id", "like_cats", "like_dogs", "have_desert", "slogan",
+"fav_day", "larkORowl", "fav_food", "fav_drink", "fav_season", "fav_month", "hobby",
+"program", "specialization", "stat_software", "R_exp", "coding_comfort", "coding_length",
+"top_three","public_health_interest", "fav_num", "bday", "bmonth", "country", "state",
+"city", "highest_educ_level")
+# create list of renamed variables in the object varlist
+colnames(Class_fall)
+
+
+```
+ 
+#4. Write code to determine and display the number of factor, integer, numerical, and character variables there are in the Class_fall dataset
+
+```{r}
+#summary table of types of variables 
+variable_summary <- Class_fall
+table(sapply(Class_fall, class))
+
+```
+
+#5 a. Using code, check the bday and bmonth variables for any unusual or missing values. If you find any, 
+#b. describe what you will do with the unusual values in a comment before or immediately following the code that does it, and 
+#c. after you have cleaned up any unusual values, find the median bday and month. *Note: please make sure that your bday and month variables are numeric before doing statistics
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
